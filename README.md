@@ -2,18 +2,44 @@
 
 Análise quantitativa dos **Microdados do Censo da Educação Superior (INEP)** — edições **2022, 2023 e 2024** — sobre quatro dimensões: **evasão/retenção**, **EAD vs. presencial**, **demanda regional** e **expansão dos cursos de TI**.
 
+## Sobre o projeto
+
+Este Projeto Integrador transforma os dados públicos do Cadastro de Cursos do INEP em uma análise reproduzível do ensino superior brasileiro. A proposta é organizar quase 2 milhões de registros curso-ano, calcular indicadores comparáveis entre 2022 e 2024 e apresentar os resultados em tabelas, gráficos, relatório analítico e uma base pronta para uso no Power BI.
+
+O trabalho busca responder quatro perguntas principais:
+
+1. Como evoluíram os indicadores de evasão, retenção e permanência?
+2. Quais diferenças aparecem entre os cursos EAD e presenciais?
+3. Como matrículas, procura e oferta se distribuem entre regiões e estados?
+4. Como os cursos de Computação e Tecnologia da Informação cresceram no período?
+
+O projeto não acompanha alunos individualmente e não utiliza dados pessoais. A unidade analisada é o curso em cada ano, com contagens agregadas publicadas pelo INEP. Por isso, as taxas de evasão apresentadas são aproximações transversais e não permitem atribuir causas ou acompanhar uma mesma turma ao longo do tempo.
+
+## Como o projeto funciona
+
+O fluxo parte dos arquivos anuais do INEP e segue quatro etapas:
+
+1. `src/indicators.py` lê e padroniza os microdados, cria classificações e calcula os indicadores.
+2. `src/figures.py` transforma as tabelas calculadas em gráficos para análise e apresentação.
+3. `src/export_powerbi.py` gera uma tabela-fato em Parquet e uma dimensão de ano para exploração interativa.
+4. `docs/RELATORIO.md` reúne metodologia, resultados, limites e conclusões; `docs/POWERBI.md` orienta a montagem do dashboard.
+
+Para conhecer o projeto sem executar o código, comece pelo [relatório analítico](docs/RELATORIO.md). Para explorar os dados de forma interativa, siga o [guia do Power BI](docs/POWERBI.md).
+
 ## Estrutura
 
 ```
-projeto_censo_sup/
+projeto-integrador-II/
 ├── data/raw/            # zips do INEP + CSVs extraídos por ano
+├── data/processed/      # tabela-fato e dimensão de ano para BI
 ├── outputs/tabelas/     # tabelas de indicadores (CSV, tidy)
 ├── outputs/figuras/     # visualizações (PNG)
 ├── docs/RELATORIO.md    # relatório analítico (leitura principal)
 └── src/
     ├── config.py        # caminhos, colunas, mapeamentos, filtro de TI
     ├── indicators.py    # ETL + cálculo de indicadores  -> tabelas
-    └── figures.py       # gráficos -> figuras
+    ├── figures.py       # gráficos -> figuras
+    └── export_powerbi.py # base tratada -> Parquet/CSV para BI
 ```
 
 ## Reprodução
