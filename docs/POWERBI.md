@@ -1,7 +1,5 @@
 # Guia — Dashboard no Power BI
 
-Sim, é totalmente viável. Os dados **já estão tratados** pelo pipeline (`src/`). Você tem duas formas de montar o dashboard:
-
 ---
 
 ## Opção A (recomendada) — Tabela-fato + medidas DAX
