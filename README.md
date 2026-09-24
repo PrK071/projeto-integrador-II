@@ -15,6 +15,26 @@ O trabalho busca responder quatro perguntas principais:
 
 O projeto não acompanha alunos individualmente e não utiliza dados pessoais. A unidade analisada é o curso em cada ano, com contagens agregadas publicadas pelo INEP. Por isso, as taxas de evasão apresentadas são aproximações transversais e não permitem atribuir causas ou acompanhar uma mesma turma ao longo do tempo.
 
+## Dashboard web
+
+O dashboard foi criado e validado no navegador, com:
+
+- KPIs de matrículas, concluintes, participação de TI e evasão.
+- Gráficos de evolução, modalidade, regiões e principais cursos.
+- Filtro interativo por ano.
+- Perfil por gênero e idade.
+- Download dos indicadores em CSV.
+- Relação com o mercado de trabalho, incluindo o cenário da [Brasscom](https://brasscom.org.br/macrossetor-de-tic-pode-gerar-ate-147-mil-empregos-formais-no-brasil-em-2025-aponta-estudo/).
+- Alertas metodológicos para não confundir formação com empregabilidade ou vagas reais.
+
+Para visualizar, abra [`dashboard/index.html`](dashboard/index.html) no navegador ou execute, na raiz do projeto:
+
+```bash
+python -m http.server 8000
+```
+
+Depois acesse <http://localhost:8000/dashboard/>.
+
 ## Como o projeto funciona
 
 O fluxo parte dos arquivos anuais do INEP e segue quatro etapas:

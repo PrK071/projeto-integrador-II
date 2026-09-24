@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard sobre formação superior em TI e mercado de trabalho brasileiro.">
+  <title>Radar de Talentos TI | Brasil 2022–2024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script><script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">RT</span><span>Radar de Talentos <b>TI</b></span></a>
+    <nav aria-label="Navegação principal"><a href="#panorama">Panorama</a><a href="#mercado">Mercado</a><a href="#perfil">Perfil</a><a href="#metodologia">Metodologia</a></nav>
+    <span class="data-chip"><i></i> INEP • 2022–2024</span>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="eyebrow">ENSINO SUPERIOR × MERCADO DE TRABALHO</div>
+      <h1>Mais gente estuda TI.<br><span>O desafio é transformar matrícula em talento.</span></h1>
+      <p class="hero-copy">Um retrato da formação superior em tecnologia no Brasil — crescimento, concentração regional e os gargalos que afetam a oferta potencial de profissionais.</p>
+      <div class="hero-actions"><a class="button primary" href="#panorama">Explorar os dados <span>↓</span></a><button class="button ghost" id="download-summary">Baixar resumo .csv</button></div>
+      <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="visual-number">+35,8%</div><div class="visual-caption">matrículas em TI<br>em apenas 2 anos</div></div>
+    </section>
+    <section class="section" id="panorama">
+      <div class="section-heading"><div><span class="section-index">01</span><h2>Panorama da formação</h2></div><p>Os principais sinais do Censo da Educação Superior.</p></div>
+      <div class="kpi-grid">
+        <article class="kpi accent"><span class="kpi-label">Matrículas em TI • 2024</span><strong>860,8 mil</strong><span class="trend up">↗ 35,8% desde 2022</span><div class="spark"><span style="width:74%"></span></div></article>
+        <article class="kpi"><span class="kpi-label">Participação no ensino superior</span><strong>8,42%</strong><span class="trend up">+1,71 p.p. em 2 anos</span><div class="spark"><span style="width:56%"></span></div></article>
+        <article class="kpi"><span class="kpi-label">Concluintes de TI • 2024</span><strong>106,2 mil</strong><span class="trend up">↗ 64,6% desde 2022</span><div class="spark"><span style="width:88%"></span></div></article>
+        <article class="kpi warning"><span class="kpi-label">Evasão em TI • 2024</span><strong>22,75%</strong><span class="trend caution">↑ 1,69 p.p. desde 2022</span><div class="spark"><span style="width:41%"></span></div></article>
+      </div>
+      <div class="grid two-thirds">
+        <article class="card chart-card">
+          <div class="card-head"><div><span class="card-kicker">EVOLUÇÃO</span><h3>O pipeline de talentos está crescendo</h3></div><div class="legend-custom"><span><i class="dot lime"></i>Matrículas</span><span><i class="dot blue"></i>Ingressantes</span><span><i class="dot purple"></i>Concluintes</span></div></div>
+          <div class="chart-wrap large"><canvas id="flow-chart" role="img" aria-label="Evolução de matrículas, ingressantes e concluintes em TI"></canvas></div>
+          <p class="chart-note">Concluintes cresceram mais rápido, mas ainda representam 20,8% do volume anual de ingressantes em 2024 — uma relação de fluxo, não uma taxa de conclusão de coorte.</p>
+        </article>
+        <article class="card insight-card"><span class="card-kicker">LEITURA-CHAVE</span><div class="insight-icon">↗</div><h3>TI cresce 4,3× mais rápido</h3><p>Enquanto o total de matrículas do ensino superior avançou <b>8,3%</b>, TI cresceu <b>35,8%</b> entre 2022 e 2024.</p><div class="comparison"><div><span>TI</span><div><i style="width:89%"></i></div><b>+35,8%</b></div><div><span>Total</span><div><i style="width:21%"></i></div><b>+8,3%</b></div></div><p class="mini-note">Expansão acelerada da oferta potencial de profissionais de tecnologia.</p></article>
+      </div>
+    </section>
+    <section class="section market-section" id="mercado">
+      <div class="section-heading light"><div><span class="section-index">02</span><h2>Formação encontra mercado</h2></div><p>Onde os dados educacionais se conectam — e onde não se conectam — ao emprego.</p></div>
+      <div class="market-banner"><div class="market-stat"><span>Cenário-base Brasscom para 2025</span><strong>+88 mil</strong><small>empregos no macrossetor TIC</small></div><div class="market-copy"><h3>Demanda aquecida não elimina o gargalo de qualificação</h3><p>A Brasscom projetou de 30 mil a 147 mil novos empregos formais em TIC em 2025 e apontou descasamento histórico entre demanda e oferta de profissionais qualificados. No lado da formação, os dados do INEP mostram expansão — acompanhada de evasão relevante.</p><a href="https://brasscom.org.br/macrossetor-de-tic-pode-gerar-ate-147-mil-empregos-formais-no-brasil-em-2025-aponta-estudo/" target="_blank" rel="noreferrer">Ver fonte externa ↗</a></div></div>
+      <div class="grid equal">
+        <article class="card dark-card chart-card"><div class="card-head"><div><span class="card-kicker">MODALIDADE</span><h3>Expansão com risco de evasão</h3></div><div class="year-toggle"><button data-year="2022">2022</button><button data-year="2023">2023</button><button class="active" data-year="2024">2024</button></div></div><div class="modality-layout"><div class="chart-wrap doughnut"><canvas id="modality-chart"></canvas><div class="doughnut-center"><b id="ead-share">58,5%</b><span>EAD</span></div></div><div class="modality-data"><div><span><i class="dot lime"></i>EAD</span><b id="ead-enrollment">503,6 mil</b><small id="ead-evasion">26,28% evasão</small></div><div><span><i class="dot blue"></i>Presencial</span><b id="pres-enrollment">357,2 mil</b><small id="pres-evasion">16,33% evasão</small></div></div></div><div class="callout"><b>Implicação:</b> o EAD amplia acesso e capilaridade, mas a evasão mais alta reduz a conversão de estudantes em profissionais formados.</div></article>
+        <article class="card dark-card chart-card"><div class="card-head"><div><span class="card-kicker">TERRITÓRIO • 2024</span><h3>Volume ainda se concentra no Sudeste</h3></div></div><div class="chart-wrap"><canvas id="region-chart"></canvas></div><div class="region-insights"><span><b>448,7 mil</b> matrículas no Sudeste</span><span><b>+43,6%</b> no Centro-Oeste desde 2022</span><span><b>+40,5%</b> no Nordeste desde 2022</span></div></article>
+      </div>
+    </section>
+    <section class="section" id="perfil">
+      <div class="section-heading"><div><span class="section-index">03</span><h2>Quem compõe o futuro da TI?</h2></div><p>Perfil dos estudantes e áreas que concentram formação.</p></div>
+      <div class="grid profile-grid">
+        <article class="card chart-card courses-card"><div class="card-head"><div><span class="card-kicker">CURSOS • 2024</span><h3>Concentração e novas especialidades</h3></div></div><div class="chart-wrap tall"><canvas id="courses-chart"></canvas></div><p class="chart-note">Sistemas de Informação domina o volume. Engenharia de Software (+88,4%), Defesa Cibernética (+92,1%) e cursos interdisciplinares (+344,2%) ganham espaço rapidamente desde 2022.</p></article>
+        <div class="profile-stack"><article class="card diversity-card"><span class="card-kicker">DIVERSIDADE • 2024</span><h3>A participação feminina avança devagar</h3><div class="gender-number">18,95<small>%</small></div><div class="gender-bar"><i></i></div><div class="gender-label"><span>Mulheres <b>163 mil</b></span><span>Homens <b>698 mil</b></span></div><p>+1,22 p.p. de presença feminina desde 2022. O desequilíbrio limita a diversidade do pipeline de talentos.</p></article><article class="card age-card"><span class="card-kicker">FAIXA ETÁRIA • 2024</span><h3>Uma base majoritariamente jovem</h3><div class="age-big"><b>53,8%</b><span>têm de 18 a 24 anos</span></div><div class="age-row"><span>25–29</span><i><b style="width:37%"></b></i><strong>19,8%</strong></div><div class="age-row"><span>30–34</span><i><b style="width:21%"></b></i><strong>11,0%</strong></div><div class="age-row"><span>35+</span><i><b style="width:27%"></b></i><strong>15,3%</strong></div></article></div>
+      </div>
+    </section>
+    <section class="section conclusions"><div class="section-heading"><div><span class="section-index">04</span><h2>O que os sinais recomendam</h2></div></div><div class="action-grid"><article><span>01</span><h3>Reter é tão importante quanto atrair</h3><p>O crescimento das matrículas não basta. A evasão de 22,75% em TI pede apoio acadêmico, carreira e engajamento — sobretudo no EAD.</p></article><article><span>02</span><h3>Conectar currículo e competências</h3><p>Áreas emergentes crescem depressa, mas volume não comprova aderência curricular. Parcerias com empresas podem aproximar formação e prática.</p></article><article><span>03</span><h3>Expandir sem reconcentrar</h3><p>Nordeste e Centro-Oeste lideram o ritmo de crescimento. Estágios, hubs e vagas remotas ajudam a converter formação regional em oportunidade.</p></article><article><span>04</span><h3>Ampliar a diversidade</h3><p>Mulheres são menos de 1 em cada 5 matrículas. Inclusão exige ações desde o ingresso até a permanência e a transição para o trabalho.</p></article></div></section>
+    <section class="method" id="metodologia"><div><span class="section-index">05</span><h2>Leia os números com cuidado</h2></div><div class="method-grid"><p><b>Base principal</b>Censo da Educação Superior/INEP, Cadastro de Cursos, 2022–2024. Evasão é proxy transversal de desvinculação, não acompanhamento de coorte.</p><p><b>Recorte de TI</b>Área CINE 6 (Computação e TIC) mais Engenharia de Computação. Licenciatura em Computação não integra o recorte.</p><p><b>Limite da relação com trabalho</b>O INEP mede formação, não vagas, salários ou empregabilidade. As implicações são interpretações; o dado de empregos vem da Brasscom.</p></div><div class="sources"><a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior" target="_blank" rel="noreferrer">Microdados INEP ↗</a><a href="https://brasscom.org.br/relatorio-perspectivas-do-mercado-de-trabalho-do-macrossetor-de-tic/" target="_blank" rel="noreferrer">Relatório Brasscom ↗</a><a href="../docs/RELATORIO.md">Relatório do projeto ↗</a></div></section>
+  </main>
+  <footer><span>Radar de Talentos TI</span><p>Dados públicos transformados em contexto • INEP 2024</p><a href="#inicio">Voltar ao topo ↑</a></footer>
+</body></html>
