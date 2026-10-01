@@ -6,23 +6,22 @@
   <title>Radar de Talentos TI | Brasil 2022–2024</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script><script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="premium.css"><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script><script src="script.js" defer></script><script src="map.js" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
   <header class="topbar">
     <a class="brand" href="#inicio"><span class="brand-mark">RT</span><span>Radar de Talentos <b>TI</b></span></a>
-    <nav aria-label="Navegação principal"><a href="#panorama">Panorama</a><a href="#mercado">Mercado</a><a href="#perfil">Perfil</a><a href="#metodologia">Metodologia</a></nav>
+    <nav aria-label="Navegação principal"><a href="#panorama">Panorama</a><a href="#territorio">Território</a><a href="#mercado">Mercado</a><a href="#perfil">Perfil</a><a href="#metodologia">Metodologia</a></nav>
     <span class="data-chip"><i></i> INEP • 2022–2024</span>
   </header>
-  <main>
+  <main><div class="utility-bar"><span>Formação <i>/</i> Panorama</span><span class="utility-source"><i></i> INEP · 2022–2024</span></div>
     <section class="hero" id="inicio">
       <div class="eyebrow">ENSINO SUPERIOR × MERCADO DE TRABALHO</div>
-      <h1>Mais gente estuda TI.<br><span>O desafio é transformar matrícula em talento.</span></h1>
-      <p class="hero-copy">Um retrato da formação superior em tecnologia no Brasil — crescimento, concentração regional e os gargalos que afetam a oferta potencial de profissionais.</p>
-      <div class="hero-actions"><a class="button primary" href="#panorama">Explorar os dados <span>↓</span></a><button class="button ghost" id="download-summary">Baixar resumo .csv</button></div>
-      <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="visual-number">+35,8%</div><div class="visual-caption">matrículas em TI<br>em apenas 2 anos</div></div>
-    </section>
+      <h1>Da formação ao <span>talento.</span></h1>
+      <p class="hero-copy">O futuro da tecnologia começa na educação. Explore os caminhos, a distribuição e os desafios da formação em TI no Brasil.</p>
+      <div class="hero-actions"><a class="button primary" href="#territorio">Explorar território <span>↗</span></a><button class="button ghost" id="download-summary">Exportar dados ↧</button></div>
+</section>
     <section class="section" id="panorama">
       <div class="section-heading"><div><span class="section-index">01</span><h2>Panorama da formação</h2></div><p>Os principais sinais do Censo da Educação Superior.</p></div>
       <div class="kpi-grid">
@@ -31,6 +30,13 @@
         <article class="kpi"><span class="kpi-label">Concluintes de TI • 2024</span><strong>106,2 mil</strong><span class="trend up">↗ 64,6% desde 2022</span><div class="spark"><span style="width:88%"></span></div></article>
         <article class="kpi warning"><span class="kpi-label">Evasão em TI • 2024</span><strong>22,75%</strong><span class="trend caution">↑ 1,69 p.p. desde 2022</span><div class="spark"><span style="width:41%"></span></div></article>
       </div>
+
+      <article class="territory-card" id="territorio" aria-labelledby="map-title">
+        <div class="territory-heading"><div><span class="card-kicker">TERRITÓRIO · INEP 2024</span><h3 id="map-title">Onde o talento se forma</h3><p>Distribuição regional das matrículas em TI</p></div><div class="map-toolbar"><span class="map-metric">Matrículas · 2024</span><button id="map-reset" aria-label="Redefinir posição do mapa">↺ <span>Redefinir</span></button></div></div>
+        <div class="territory-body"><div class="map-stage"><canvas id="brazil-map" role="img" aria-label="Mapa tridimensional das cinco regiões do Brasil. Arraste para girar. Use os botões de região para consultar os dados."></canvas><div class="map-loading" id="map-status">Carregando geografia do Brasil…</div><div class="map-hint"><span>↔</span> Arraste para girar · Selecione uma região</div></div>
+          <aside class="map-detail"><div class="selection-chip"><i></i> REGIÃO EM FOCO</div><div aria-live="polite" aria-atomic="true"><h4 id="region-name">Sudeste</h4><strong id="region-value">448,7 mil</strong><p>matrículas em TI em 2024</p><div class="region-share"><span>Participação nacional</span><b id="region-share">52,1%</b></div></div><div class="growth-insights"><div><b>+43,6%</b><span>Centro-Oeste</span></div><div><b>+40,5%</b><span>Nordeste</span></div><small>Crescimento de matrículas desde 2022</small></div><div class="intensity-legend"><span>Volume de matrículas</span><i></i><div><span>Menor</span><span>Maior</span></div></div></aside>
+        </div><div class="region-selector" role="group" aria-label="Selecionar região"><button data-region="1" aria-pressed="false">Norte</button><button data-region="2" aria-pressed="false">Nordeste</button><button data-region="3" aria-pressed="true">Sudeste</button><button data-region="4" aria-pressed="false">Sul</button><button data-region="5" aria-pressed="false">Centro-Oeste</button></div><p class="geography-note">Geografia: IBGE · Altura e cor representam o volume regional. Pontos são textura visual, não instituições.</p>
+      </article>
       <div class="grid two-thirds">
         <article class="card chart-card">
           <div class="card-head"><div><span class="card-kicker">EVOLUÇÃO</span><h3>O pipeline de talentos está crescendo</h3></div><div class="legend-custom"><span><i class="dot lime"></i>Matrículas</span><span><i class="dot blue"></i>Ingressantes</span><span><i class="dot purple"></i>Concluintes</span></div></div>
@@ -45,7 +51,7 @@
       <div class="market-banner"><div class="market-stat"><span>Cenário-base Brasscom para 2025</span><strong>+88 mil</strong><small>empregos no macrossetor TIC</small></div><div class="market-copy"><h3>Demanda aquecida não elimina o gargalo de qualificação</h3><p>A Brasscom projetou de 30 mil a 147 mil novos empregos formais em TIC em 2025 e apontou descasamento histórico entre demanda e oferta de profissionais qualificados. No lado da formação, os dados do INEP mostram expansão — acompanhada de evasão relevante.</p><a href="https://brasscom.org.br/macrossetor-de-tic-pode-gerar-ate-147-mil-empregos-formais-no-brasil-em-2025-aponta-estudo/" target="_blank" rel="noreferrer">Ver fonte externa ↗</a></div></div>
       <div class="grid equal">
         <article class="card dark-card chart-card"><div class="card-head"><div><span class="card-kicker">MODALIDADE</span><h3>Expansão com risco de evasão</h3></div><div class="year-toggle"><button data-year="2022">2022</button><button data-year="2023">2023</button><button class="active" data-year="2024">2024</button></div></div><div class="modality-layout"><div class="chart-wrap doughnut"><canvas id="modality-chart"></canvas><div class="doughnut-center"><b id="ead-share">58,5%</b><span>EAD</span></div></div><div class="modality-data"><div><span><i class="dot lime"></i>EAD</span><b id="ead-enrollment">503,6 mil</b><small id="ead-evasion">26,28% evasão</small></div><div><span><i class="dot blue"></i>Presencial</span><b id="pres-enrollment">357,2 mil</b><small id="pres-evasion">16,33% evasão</small></div></div></div><div class="callout"><b>Implicação:</b> o EAD amplia acesso e capilaridade, mas a evasão mais alta reduz a conversão de estudantes em profissionais formados.</div></article>
-        <article class="card dark-card chart-card"><div class="card-head"><div><span class="card-kicker">TERRITÓRIO • 2024</span><h3>Volume ainda se concentra no Sudeste</h3></div></div><div class="chart-wrap"><canvas id="region-chart"></canvas></div><div class="region-insights"><span><b>448,7 mil</b> matrículas no Sudeste</span><span><b>+43,6%</b> no Centro-Oeste desde 2022</span><span><b>+40,5%</b> no Nordeste desde 2022</span></div></article>
+
       </div>
     </section>
     <section class="section" id="perfil">
